@@ -13,7 +13,7 @@ var issues = issueDOMArray.map(issue => ({
 var issuePages = issues.reduce((DOM, issue, index) => {
   const epic = issue.epic ? `
     <g class="epic">
-      <rect width=200 height="15"
+      <rect width=200 height="0.1" y="13"
             style="fill:white;stroke-width:0.5;stroke:rgb(0,0,0)" />
       <text y="13" width="200" x="50%" text-anchor="middle"
             style="font-size: ${issue.epic.length > 20 ? '0.8em' : '1em'};">
@@ -73,7 +73,7 @@ var issuePages = issues.reduce((DOM, issue, index) => {
       line-height: 1.2;
     }
     .issue {
-      border: solid;
+      /* border: solid; */
     }
     .epic {
       text-align: center;
